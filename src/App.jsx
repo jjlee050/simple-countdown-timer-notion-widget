@@ -21,7 +21,12 @@ function App() {
             <FlipClockCountdown className='justify-center mt-4'
               to={date.startDate}
               showSeparators={false}
-              hideOnComplete={false}/>
+              hideOnComplete={false}
+              labelStyle={{ color: 'black' }}
+              digitBlockStyle={{
+                color: 'white',
+              }}
+              style={{'--fcc-separator-color': 'black' /* color of colon */}}/>
             <div className='text-center p-4 mt-2'>      
               <Button onClick={() => {
                 window.localStorage.clear();
